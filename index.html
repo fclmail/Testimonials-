@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00ffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 8px solid #00ffff;
+            box-shadow: 0 0 20px #00ffff;
+        }
+        .testimonial-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 15px;
+            border: 4px solid #00ffff;
+            box-shadow: 0 0 15px #00ffff;
+        }
+        .testimonial {
+            color: #00ffff;
+            text-align: center;
+            border: 3px solid #00ffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00ffff;
+        }
+        @keyframes scrollUp {
+            0% { opacity: 0; transform: translateY(100%); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="testimonial-container">
+        <div class="testimonial" id="testimonial"></div>
+    </div>
+    <script>
+        const testimonials = [
+            "1. IT WAS SO FAST AND EASY. I WAS AMAZED I PAYED ONLY $1 AND INSTANTLY GOT $100 BACK. THANK YOU 100 X",
+            "2. IT TOOK LESS THAN 10 SECONDS",
+            "3. THE 100 X GHX MULTIPLIER IS GREAT. ITS NICE TO HAVE ALL YOUR PURCHASES MULTIPLIED 100 TIMES. I PAYED ONLY $10 AND INSTANTLY GOT $1000 DIRECTLY IN MY METAMASK POLYGON WALLET. THANK YOU 100 X",
+            "4. ITS GREAT ALL PURCHASE AMOUNTS GET MULTIPLIED 100 X (100 TIMES).",
+            "5. I PAYED ONLY $10 AND GOT $1000 INSTANTLY DIRECTLY TO MY POLYGON WALLET ADDRESS. THANKS 100 X CRYPTO",
+            "6. I AM SO HAPPY I GOT THIS DEAL BEFORE THE TIMER RAN OUT \n ITS GREAT THAT $1 USDC = $1.0043 100 X \n JOHN",
+            "7. IT WAS SO FAST AND EASY WITH MULTIPLIED PROFIT EVERY TIME, I'VE ALREADY COME BACK TO BUY 4 TIMES. THANKS 100 X. \n STEPHEN",
+            "8. I LOOK FORWARD TO HOLDING MY CRYPTO AND WATCHING THE VALUE AND PRICE GO EVEN HIGHER. THANK YOU 100X. \n VERONICA",
+            "9. I CHOSE METAMASK PAYED ONLY $1 USDC POLYGON AND INSTANTLY GOT $100 DIRECTLY TO THE SAME WALLET ADDRESS I PAYED WITH. THANK YOU 100 X. \n BRENDA",
+            "10. I CLICKED 100% FREE AIRDROP BUTTON ENTERED MY EMAIL AND POLYGON 0x.... WALLET ADDRESS AND INSTANTLY RECEIVED FREE CRYPTO TO MY WALLET. THANK YOU 100 X CRYPTO. \n JASON"
+        ];let index = 0;
+    const testimonialElement = document.getElementById("testimonial");
+    function showTestimonial() {
+        testimonialElement.innerHTML = testimonials[index];
+        index = (index + 1) % testimonials.length;
+    }
+    setInterval(showTestimonial, 4000);
+    showTestimonial();
+</script>
+
+</body>
+</html>
